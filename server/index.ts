@@ -17,7 +17,7 @@ console.log('process.env.MONGODB_URI', process.env.MONGODB_URI);
 payload.init({
   license: process.env.PAYLOAD_LICENSE,
   secret: process.env.PAYLOAD_SECRET_KEY,
-  mongoURL: process.env.MONGODB_URI,
+  mongoURL: 'mongodb+srv://vercel-admin-user:SezR7bEt03xvgghb@cluster0.frdfb.mongodb.net/Cluster0',
   express: server,
 });
 
