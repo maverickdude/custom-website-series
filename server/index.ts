@@ -13,10 +13,11 @@ dotenv({
 const dev = process.env.NODE_ENV !== 'production';
 const server = express();
 
+console.log('process.env.MONGODB_URI', process.env.MONGODB_URI);
 payload.init({
   license: process.env.PAYLOAD_LICENSE,
   secret: process.env.PAYLOAD_SECRET_KEY,
-  mongoURL: process.env.MONGO_URL,
+  mongoURL: process.env.MONGODB_URI,
   express: server,
 });
 
