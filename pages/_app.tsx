@@ -21,7 +21,7 @@ import transitions from '../css/transitions';
 import 'react-toastify/dist/ReactToastify.css';
 
 type AppProps = {
-  pageProps: unknown
+  pageProps: Object,
   Component: React.FC<{ footer: FooterType, socialMedia: SocialMediaType }>
 } & {
   megaMenu: MegaMenuType

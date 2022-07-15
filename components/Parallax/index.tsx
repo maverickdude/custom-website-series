@@ -7,7 +7,7 @@ import useStyles from './css';
 
 export const Parallax: React.FC<TParallax> = (props) => {
   const {
-    htmlElement: HtmlElement = 'div',
+    // htmlElement: HtmlElement = 'div',
     children,
     yDistance = 50,
     className,
@@ -53,13 +53,13 @@ export const Parallax: React.FC<TParallax> = (props) => {
   };
 
   return (
-    <HtmlElement
+    <div
       ref={ref}
       className={[styles.parallax, className].filter(Boolean).join(' ')}
       style={combinedStyles}
     >
       { children}
-    </HtmlElement>
+    </div>
   );
 };
 
