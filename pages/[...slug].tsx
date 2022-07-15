@@ -62,3 +62,18 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     revalidate: 1,
   };
 };
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // const pageReq = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/pages?limit=100`);
+  // const pageData = await pageReq.json();
+  const pageData = {
+    docs: [],
+  };
+
+  return {
+    paths: pageData.docs.map(({ slug }) => ({
+      params: { slug: slug.split('/') },
+    })),
+    fallback: false,
+  };
+};
