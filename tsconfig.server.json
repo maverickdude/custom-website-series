@@ -6,6 +6,6 @@
     "noEmit": false,
   },
   "include": [
-    "api"
+    "pages/api"
   ]
 }
